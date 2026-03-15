@@ -14,3 +14,5 @@ class Player:
         self.Matches4thXI = 0
         self.MatchesEMWCL = 0
         self.CTCCPoints = 0
+        self.Qualified = False
+        self.Number=None
