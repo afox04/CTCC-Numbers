@@ -86,9 +86,8 @@ ClubNumbers.to_csv('data/PreviousNumbers.csv',index=False)
 #Find who is close
 Names = [Player.name for Player in Players.values()]
 Points = [Player.CTCCPoints for Player in Players.values()]
-TotalPoints = pd.DataFrame({'Name':Names,'CTCC Points':Points})
-del Names,Points
-
-
+FirstXIGames = [Player.Matches1stXI for Player in Players.values()]
+TotalPoints = pd.DataFrame({'Name':Names,'CTCC Points':Points,'1s Matches':FirstXIGames})
+del Names,Points,FirstXIGames
 
 print('Complete, Time Taken:',datetime.now()-StartTime)
